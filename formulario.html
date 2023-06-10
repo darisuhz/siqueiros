@@ -1,0 +1,131 @@
+
+<html>
+<head><title>Formulario</title>
+    <script>
+        function mostrarFechaHora() {
+            var fechaHora = new Date();
+            var fecha = fechaHora.toLocaleDateString();
+            var hora = fechaHora.toLocaleTimeString();
+
+            document.getElementById("fecha").innerHTML = fecha;
+            document.getElementById("hora").innerHTML = hora;
+        }
+    </script>
+     <script>
+        if(localStorage.getItem('contador')) {
+            var contador = parseInt(localStorage.getItem('contador'));
+            contador++;
+            localStorage.setItem('contador', contador);
+        } else {
+            localStorage.setItem('contador', 1);
+        }
+    </script>
+    <head>
+<body bgcolor="red" onload="mostrarFechaHora()" onload="blinktext">
+    <h2>Fecha y hora actual</h2>
+    <p>Fecha: <span id="fecha"></span></p> <p>Hora: <span id="hora"></span></p>
+    <br><br>
+    <p>Esta página ha sido visitada <span id="visitas"></span> veces.</p>
+    <script>
+        // Obtener el contador almacenado y mostrarlo en el elemento 'visitas'
+        var contador = localStorage.getItem('contador');
+        document.getElementById('visitas').textContent = contador;
+    </script>
+<h2 align="center">Fomulario de informacion</h2>
+<hr size="4" noshade>
+<p h1><marquee BGCOLOR="purple" direction=left> ¿Que tanto sabes sobre Siqueiros?</marquee></p h1>
+<form type="text" action="mailto:darioalejandrouribe@gmail.com" method="post">
+<p>¿Cuantas pinturas hizo?<br><br>
+<input type="radio" name="naturaleza" value="En julio de 1687." />30
+<input type="radio" name="naturaleza" value="En junio de 1497." />71
+<input type="radio" name="naturaleza" value="En marzo de 1997." />50
+<input type="radio" name="naturaleza" value="En enero de 2006" />120
+</p></form>
+<form type="text" action="mailto:darioalejandrouribe@gmail.com" method="post">
+<p>¿Cuantos murales hizo?<br><br>
+<input type="radio" name="naturaleza" value="En la obra de Isaac Newton Principios filosoficos de la filosofía filosofal." />5.
+<input type="radio" name="naturaleza" value="Con ayuda de la television" />10.
+<input type="radio" name="naturaleza" value="En un libro llamado Tippens" />Ninguno.
+<input type="radio" name="naturaleza" value="En la obra de Isaac Newton Principios matemáticos de la filosofía Natural." />3.
+</p></form>
+<form type="text" action="mailto:darioalejandrouribe@gmail.com" method="post">
+<p>¿Donde nacio?<br><br>
+<input type="radio" name="naturaleza" value="Explica porque nos mantenemos enraizados en el cielo." />CDMX.
+<input type="radio" name="naturaleza" value="Explica porque no podemos flotar." />Queretaro.
+<input type="radio" name="naturaleza" value="Explica porque podemos levitar." />Chihuahua.
+<input type="radio" name="naturaleza" value="Explica porque nos mantenemos enraizados en el suelo." />Jalisco.
+</p></form>
+<form type="text" action="mailto:darioalejandrouribe@gmail.com" method="post">
+<p>¿Cuando murio?<br><br>
+<input type="radio" name="naturaleza" value="Newton vio caer una manzana al suelo y le hizo preguntarse por qué la fruta siempre caía directamente al suelo." />29 de Mayo del 2023.
+<input type="radio" name="naturaleza" value="Newton vio caer una naranja al suelo y le hizo preguntarse por qué la sandia siempre caía directamente al suelo." />30 de Agosto del 1994.
+<input type="radio" name="naturaleza" value="Newton tuvo un sueño sobre eso." />5 de Octubre de 1959.
+<input type="radio" name="naturaleza" value="Tesla le ayudo." />6 de Enero de 1974.
+</p></form>
+<form type="text" action="mailto:darioalejandrouribe@gmail.com" method="post">
+<p>¿Donde fallecio?<br><br>
+<input type="radio" name="naturaleza" value="Científico frances" />Cuernavaca.
+<input type="radio" name="naturaleza" value="Considerado el padre y fundador de la física clásica." />CDMX.
+<input type="radio" name="naturaleza" value="Científico mexicano, considerado gran matematico" />Oaxaca.
+<input type="radio" name="naturaleza" value="Científico irlandes, considerado el padre y fundador de la geografia." />Michoacan..
+</p></form>
+
+<div align ="center">
+<p>
+    <br>
+<p h1><marquee BGCOLOR="white" direction=left> Dejanos tu informacion para poder evaluarte</marquee></p h1>
+    <br>
+Educación
+<select name="especificar">
+<option value="Básica">Básica</option>
+<option value="Preparatoria">Preparatoria</option>
+<option value="Técnica">Técnica</option>
+
+<option value="Universidad">Universidad</option>
+</select><br><br><br>
+</p>
+
+<p>
+Comentarios<br>
+<textarea name="Comentarios" rows="10" cols="50" wrap=""></textarea>
+</p>
+
+<p>
+¿Como puedo comunicarme contigo?<br>
+<table>
+<tr><td>Nombre:</td><td><input type="text" name="nombre" size="30"/></td></tr>
+<tr><td>Correo electrónico:</td><td><input type="text" name="correo" size="30"/></td></tr>
+<tr><td>Teléfono:</td><td><input type="text" name="teléfono" size="30"/></td></tr>
+</table>
+</p>
+</p>
+<p>
+<input type="checkbox" name="regresar" checked="checked"/>Comunicate conmigo via correo electrónico.
+</p>
+
+<p>
+<input type="checkbox" name="regresar"/>Comunicate conmigo por teléfono.
+</p>
+
+<p>
+    <input type="submit" value="Enviar"/>
+<form method="get">
+<input type="reset" value="Borrar"/>
+</form>
+</p>
+</div>
+<p>Pasa el cursor por el siguiente texto:</p><br>
+
+<div style="cursor: wait;">Cargando...</div>
+<script>
+    function confirmacion() {
+      var pregunta = confirm("¿Deseas regresar a inicio?")
+      if(pregunta) {
+        alert("")
+         window.location.href="index.html";
+    }
+    }
+    </script>
+    <button type="button" onclick="confirmacion()" >Regresar</button>
+</body>
+</html>

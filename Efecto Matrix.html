@@ -1,0 +1,63 @@
+<html>
+<head>
+  <title>Efecto Matrix</title>
+  <style>
+    body {
+      background-color: black;
+      overflow: hidden;
+    }
+    
+    #matrix {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      color: #0F0; /* Color de los caracteres (verde) */
+      font-family: 'Courier New', monospace;
+      font-size: 1.5em;
+      pointer-events: none; /* Evita que los caracteres se seleccionen al hacer clic */
+    }
+  </style>
+</head>
+<body>
+  <div id="matrix"></div>
+
+  <script>
+    // Obtén el elemento contenedor
+    var matrix = document.getElementById("matrix");
+
+    // Obtén el ancho y alto del contenedor
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+
+    // Calcula el número de filas y columnas
+    var columns = Math.floor(width / 20);
+    var rows = Math.floor(height / 20);
+
+    // Crea una matriz con caracteres aleatorios
+    var codeMatrix = [];
+    for (var i = 0; i < columns; i++) {
+      codeMatrix[i] = [];
+      for (var j = 0; j < rows; j++) {
+        codeMatrix[i][j] = String.fromCharCode(Math.floor(Math.random() * 128));
+      }
+    }
+
+    // Actualiza la posición de los caracteres
+    function updateMatrix() {
+      var matrixHTML = "";
+      for (var j = 0; j < rows; j++) {
+        for (var i = 0; i < columns; i++) {
+          matrixHTML += "<span style='opacity: " + (j / rows) + "'>" + codeMatrix[i][j] + "</span>";
+        }
+        matrixHTML += "<br/>";
+      }
+      matrix.innerHTML = matrixHTML;
+    }
+
+    // Actualiza la posición de los caracteres periódicamente
+    setInterval(updateMatrix, 50);
+  </script>
+</body>
+</html>

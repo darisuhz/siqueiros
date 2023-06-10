@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <title>David Siqueiros</title>        
+        <script>
+            function mostrarFechaHora() {
+                var fechaHora = new Date();
+                var fecha = fechaHora.toLocaleDateString();
+                var hora = fechaHora.toLocaleTimeString();
+    
+                document.getElementById("fecha").innerHTML = fecha;
+                document.getElementById("hora").innerHTML = hora;
+            }
+        </script>
+         <script>
+            if(localStorage.getItem('contador')) {
+                var contador = parseInt(localStorage.getItem('contador'));
+                contador++;
+                localStorage.setItem('contador', contador);
+            } else {
+                localStorage.setItem('contador', 1);
+            }
+        </script>
+                <style>
+                    @keyframes move {
+                        0% { transform: translateX(0); } /* Posición inicial */
+                        50% { transform: translateX(200px); } /* Posición intermedia */
+                        100% { transform: translateX(0); } /* Posición final */
+                    }
+        
+                        /* Aplica la animación al elemento de texto */
+                    .moving-text {
+                        animation: move 3s infinite; /* 3 segundos de duración y se repite infinitamente */
+                    }
+                </style>
+    </head>
+    <body onload="mostrarFechaHora()" onload="blinktext">
+        <h6 align="right">Uribe Hernandez Darío Alejandro</h6>
+        <h2>Fecha y hora actual</h2>
+        <p>Fecha: <span id="fecha"></span></p> <p>Hora: <span id="hora"></span></p>
+        <br><br>
+        <p>Esta página ha sido visitada <span id="visitas"></span> veces.</p>
+        <script>
+            // Obtener el contador almacenado y mostrarlo en el elemento 'visitas'
+            var contador = localStorage.getItem('contador');
+            document.getElementById('visitas').textContent = contador;
+        </script>
+        <script>
+            function obras(){
+                window.location = "obras.html"
+            }
+            function formulario(){
+                window.location = "formulario.html"
+            }
+            function museo(){
+                window.location = "museo.html"
+            }
+        </script>
+        <div align="left">
+            <button type="button" onclick="obras()">OBRAS</button> 
+        </div>
+        <div align="center">
+            <button type="button" onclick="formulario()">FORMULARIO</button> 
+        </div>
+        <div align="right">
+            <button type="button" onclick="museo()">MUSEO</button> 
+        </div>
+        <hr align="center" color="purple" width="125%" size="10" noshade><br><br>
+        <h1 align="center">David Alfaro Siqueiros</h1>
+        <div align="center">
+            <img src="img_01.jpg"  vspace="30" width="620" height="580">
+        </div>
+        <p ><h1><marquee BGCOLOR="purple" direction=left> Biografía</h1></marquee></p>
+        <font face="Arial Black" size="5">
+            <p align="center" class="moving-text"> Nació el 29 de diciembre de 1896 en Santa Rosalía de Camargo, Chihuahua, y murió el 4 de enero de 1974 en Cuernavaca, Morelos.<br>
+            Comenzó sus estudios de pintura en 1908 mientras acudía de manera intermitente a la Academia de San Carlos, institución a la <br>
+            que se integró de manera regular en 1911. En 1913 ingresó a la Escuela de Pintura al Aire Libre de Santa Anita y cinco años después <br>
+            viaja a Europa, donde conoce a Diego Rivera. En 1921, durante su estancia en Barcelona, España, redactó y publicó uno de los textos <br>
+            fundacionales para el arte mexicano de la primera mitad del siglo XX, y en 1922 de regreso en México se incorporó al grupo de artistas <br>
+            comisionados para llevar a cabo el programa iconográfico mural de la Escuela Nacional Preparatoria.<br><br>
+            <hr align="center" color="purple" width="75%" size="4" noshade><br><br> 
+            <p align="center" class="moving-text">
+            Además de haber formado parte de múltiples organizaciones como el Comité Ejecutivo del Partido Comunista Mexicano, la Confederación Sindical <br>
+            Latinoamericana, la Liga de Escritores y Artistas de Uruguay y la Liga Nacional contra el Fascismo y la Guerra, en 1935 crea en Nueva York el <br>
+            “Siqueiros Experimental Workshop”. Tres años después, en 1951 edita la revista Arte Público y en 1965 funda “La Tallera”. A lo largo de su vida <br>
+            se hizo acreedor de múltiples distinciones y homenajes. En 1950 ganó el Premio para Artistas Extranjeros en la XXV Bienal de Venecia y dieciséis <br>
+            años después, en 1966 le fue entregado el Premio Nacional de Artes, otorgado por el Gobierno de México. <br><br>
+            <hr align="center" color="purple" width="75%" size="4" noshade><br><br>
+            <p align="center" class="moving-text"> 
+            Para Siqueiros socialismo revolucionario y modernidad tecnológica eran conceptos íntimamente relacionados. Estaba convencido de que la naturaleza <br>
+            revolucionaria del arte no dependía tan sólo del contenido de sus imágenes, sino de la creación de un equivalente estético y tecnológico en consonancia <br>
+            con los contenidos. Toda su vida artística estuvo presidida por la voluntad de crear una pintura mural experimental e innovadora.<br><br>
+            <hr align="center" color="purple" width="75%" size="4" noshade><br><br> 
+            <p align="center" class="moving-text">
+            Siqueiros adaptaba sus composiciones a lo que él llamó la "arquitectura dinámica", basada en la construcción de composiciones en perspectiva poliangular. <br>
+            Para ello estudiaba cuidadosamente los posibles recorridos de los futuros espectadores en los lugares que albergarían sus murales y definía así los puntos <br>
+            focales de la composición. Siqueiros llegó a utilizar una cámara de cine para reproducir la visión de un espectador en movimiento y ajustar más eficazmente <br>
+            la composición a esa mirada dinámica. <br><br>
+            <hr align="center" color="purple" width="75%" size="4" noshade><br><br> 
+            <p align="center" class="moving-text">
+            Su anhelo por lograr la adecuación entre las técnicas pictóricas y la contemporaneidad tecnológica le llevó a crear en 1936 un Taller Experimental en Nueva York.<br>
+            Las prácticas del taller buscaban integrar la arquitectura, la pintura y la escultura con los métodos y materiales ofrecidos por la industria. Allí se experimentaba<br>
+            a partir de lo que Siqueiros denominaba "el accidente pictórico", esto es, la práctica de la improvisación mediante técnicas como el goteo de pintura y las texturas <br>
+            con arena. Los chorreones y salpicaduras dejadas caer sobre el lienzo, que luego pasarían a ser emblemáticas del expresionismo abstracto americano, fueron una práctica <br>
+            gestada en el taller de Siqueiros, al que asistieron Jackson Pollock y otros jóvenes que llegarían a formar la primera generación de artistas estadounidenses con un <br>
+            lenguaje propio.<br><br>
+            <hr align="center" color="purple" width="75%" size="4" noshade><br><br> 
+            <p align="center" class="moving-text">
+            El mural que realizó en la sede del Sindicato Mexicano de Electricistas (1939-1940, Ciudad de México) bajo el título Retrato de la burguesía, recoge el aprendizaje obtenido <br>
+            tras las investigaciones efectuadas a lo largo de toda la década de los treinta y constituye una de las obras murales más significativas del siglo XX. Siqueiros eligió para el <br>
+            mural la escalera principal del edificio. <br><br>
+            <hr align="center" color="purple" width="75%" size="4" noshade><br><br> 
+            <p align="center" class="moving-text">
+            La primera fase del proyecto, para el que contó con un equipo de ayudantes en el que figuraban artistas tan significativos como Josep Renau, consistió en un análisis del espacio <br>
+            arquitectónico. El objetivo era adecuar la composición de modo que las tres paredes y el techo quedaran integrados en una superficie pictórica continua. Para Siqueiros crear un campo <br>
+            visual dinámico y continuo, en sintonía con el del espectador que subiera o bajara la escalera, era tan importante como el tema representado. <br><br>
+            <hr align="center" color="purple" width="75%" size="4" noshade><br><br> 
+            <p align="center" class="moving-text">
+            Si en Retrato de la burguesía la utilización de la fotografía documental en el proceso de elaboración dota al mural de un inequívoco espíritu de contemporaneidad, en <br>
+            Nueva Democracia (1944, Palacio de Bellas Artes, Ciudad de México) Siqueiros construye un emblema intemporal del triunfo de la libertad. Aunque la pintura tenía 16 metros de <br>
+            longitud, para Siqueiros no era más que "un cuadro grande"; las únicas obras que, según él, merecían el nombre de murales eran las que se articulaban con la arquitectura.<br><br>
+            <hr align="center" color="purple" width="75%" size="4" noshade><br><br> 
+            <p align="center" class="moving-text">
+            La integración de todas las artes, que Siqueiros anheló a lo largo de toda su vida, pudo hacerse realidad en el proyecto que ocupó sus últimos años, el Polyforum Cultural <br> 
+            Siqueiros (1967-1971, Ciudad de México). El edificio concebido por el mismo Siqueiros, posee doce lados totalmente cubiertos por murales, cada uno con un tema diferente. <br> 
+            En el techo abovedado del piso superior pintó Marcha de la humanidad en América Latina hacia el cosmos, para cuya contemplación los observadores se colocan sobre una estructura móvil <br>
+            que gira siguiendo el sentido narrativo de las imágenes y que permite al espectador "transitar" por el relato mientras un juego de luz y sonido hace más vívida la experiencia. <br>
+            Si bien la grandilocuencia del proyecto no alcanzó altos niveles estéticos, supuso un gran logro como empresa colectiva que aglutinó a un equipo enorme de técnicos y artistas a los que <br>
+            Siqueiros supo infundir el gran ideal de un arte tecnológica y socialmente revolucionario. <br><br>
+        </p>
+    </font>
+    </body>
+</html>

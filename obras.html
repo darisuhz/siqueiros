@@ -1,0 +1,157 @@
+<HTML>
+    <HEAD>
+    <TITLE>
+        Obras
+    </TITLE>
+    <script>
+        function mostrarFechaHora() {
+            var fechaHora = new Date();
+            var fecha = fechaHora.toLocaleDateString();
+            var hora = fechaHora.toLocaleTimeString();
+
+            document.getElementById("fecha").innerHTML = fecha;
+            document.getElementById("hora").innerHTML = hora;
+        }
+    </script>
+    <style>
+        @keyframes parpadeo {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .parpadeante {
+            animation: parpadeo 1s infinite;
+        }
+    </style>
+     <script>
+        if(localStorage.getItem('contador')) {
+            var contador = parseInt(localStorage.getItem('contador'));
+            contador++;
+            localStorage.setItem('contador', contador);
+        } else {
+            localStorage.setItem('contador', 1);
+        }
+    </script>
+    </HEAD>
+    <body bgcolor="yellow" onload="mostrarFechaHora()" onload="blinktext">
+        <h2>Fecha y hora actual</h2>
+        <p>Fecha: <span id="fecha"></span></p> <p>Hora: <span id="hora"></span></p>
+        <br><br>
+        <p>Esta página ha sido visitada <span id="visitas"></span> veces.</p>
+        <script>
+            // Obtener el contador almacenado y mostrarlo en el elemento 'visitas'
+            var contador = localStorage.getItem('contador');
+            document.getElementById('visitas').textContent = contador;
+        </script>
+        <br>
+    <h2 align="center"> <font face="Engravers MT">Siqueiros</font></h2>
+    <br>
+    <br>
+    <p><h2 font face="Arial">Obras</h2></p>
+    <br>
+
+    <p><h3><marquee BGCOLOR="green" direction=left>SUS MEJORES OBRAS</h3></marquee></p>
+
+        <TABLE align="center" BCCOLOR="#00008B" BORDER="2" CELLPADDING="3" CELLSPACING="O" BORDERCOLOR="green">
+            <FONT COLOR="red" align="center" SIZE = "4" FACE="Arial Rounded MT Bold "> <p  align="center"><b> Las mejores obras de Siqueiros </p></b></FONT>
+            <tr align="center"> 
+
+
+            <tr> <th BGCOLOR="green" Colspan="1"> <FONT COLOR="red" SIZE="4" FACE="Arial Narrow"> <b> Invento </b></FONT> </th>
+                <th BGCOLOR="green"><FONT COLOR="red" SIZE="4" FACE="Arial Narrow"> <b>Nombre </b></FONT> 
+            <th BGCOLOR="green"><FONT COLOR="red" SIZE="4" FACE="Arial Narrow"> <b>Informacion </b></FONT> 
+            </th> <th BGCOLOR="green"> <FONT COLOR="red" SIZE="4" FACE="Arial Narrow"> <b> Mas informacion </b>
+            </FONT></th></tr>
+            
+            <tr><td allgn="center"> <img src="img_02.jpg" align="center" width="200" height="150"></td>
+                <td width="10%">Retrato de la burguesía (1939)</td>
+                <td width="43%"><p h6>Retrato de la Burguería fue elaborado para decorar el Sindicato Mexicano de Electricistas, durante una etapa que coincide con su activismo antifascista. Es esta intención o denuncia al orden fascista y capitalista lo que se recoge en el mural.</p></td>
+                <td align="center"><a href="https://www.culturagenial.com/es/david-alfaro-siqueiros/">
+                    <button>Mas informacion</button>
+                  </a> 
+                 </td>
+
+
+
+
+                <tr><td allgn="center"> <img src="img_03.jpg" with="150" height="150"></td>
+                    <td width="10%">Tríptico La nueva democracia (1945)</td>
+                    <td width="43%"><p h6></p>Probablemente, el tríptico La nueva democracia, exhibido en el Palacio de Bellas Artes, sea la obra más conocida del pintor. El panel central es flanqueado a la izquierda por la escena Víctimas de la guerra y, a la derecha, por Víctimas del fascismo. La obra fue ejecutada sobre un muro exento. En ella, Siqueiros usó la poliangularidad para aprovechar los diferentes ángulos de visión dentro del recinto.</td></p>
+                    <td align="center"><a href="https://www.culturagenial.com/es/david-alfaro-siqueiros/">
+                        <button>Mas informacion</button>
+                      </a> 
+                     </td>
+
+
+
+                    <tr><td allgn="center"> <img src="img_04.jpg" width="200" height="150"></td>
+                        <td width="10%">Del porfirismo a la revolución (1957-1966)</td>
+                        <td width="43%"><p h6></p>Del porfirismo a la revolución fue un encargo para el Museo Nacional de Historia. Se trata de una obra que ocupa todas las paredes del espacio con diversas escenas del recorrido histórico en cuestión. Predomina, por lo tanto, el carácter narrativo sobre el carácter simbólico.</p></td>
+                            <td align="center"><a href="https://www.culturagenial.com/es/david-alfaro-siqueiros/">
+                                <button>Mas informacion</button>
+                              </a> 
+                             </td>
+
+
+
+
+                        <tr><td allgn="center"> <img src="img_05.jpg" width="250" height="200"></td>
+                            <td width="10%">El pueblo a la Universidad, la Universidad al pueblo (1956)</td>
+                            <td width="43%"><p h6></p>CEl nombre completo de este mural es El pueblo a la Universidad, la Universidad al pueblo. Por una cultura nacional neohumanista de profundidad universal. Fue elaborado entre los años 1952 y 1956 para la Universidad Autónoma de México. Esta obra marca un hito importante, debido al magnífico desarrollo de una técnica revolucionaria: el escultomural. La obra es apenas una de las tres fachadas intervenidas por Siqueiros, entre las que se cuentan El derecho a la cultura y Nuevo símbolo universitario.</p></td>
+                            <td align="center"><a href="https://www.culturagenial.com/es/david-alfaro-siqueiros/">
+                                <button>Mas informacion</button>
+                              </a> 
+                             </td>
+
+
+
+                            <tr><td allgn="center"> <img src="img_06.jpg" width="250" height="200"></td>
+                                <td width="10%">La marcha de la humanidad (Polyforum Siqueiros, 1965-1971)</td>
+                                <td width="43%"><p h6></p>El conjunto mural del Polyforum Siqueiros es la obra cumbre de este muralista mexicano. La suma total de las superficies intervenidas por el pintor, tanto interiores como exteriores, hace de La marcha de la humanidad la obra mural más grande del mundo. En tal sentido, representa un esfuerzo análogo al de la Capilla sixtina de Miguel Ángel. Expresa la convicción política de Siqueiros sobre la marcha de la humanidad hacia la libertad plena.</p></td>
+                                <td align="center"><a href="https://www.culturagenial.com/es/david-alfaro-siqueiros/">
+                                    <button>Mas informacion</button>
+                                  </a> 
+                                 </td>
+                                 </td>
+
+            </table>
+
+
+
+    <p><h3><marquee BGCOLOR="green" direction=left> Estilo de David Alfaro Siqueiros</h3></marquee></p>
+    <font face="Arial" class="parpadeante"><p><h5 align="left">
+        <img src="img_07.jpg" align="right">
+        <p>Las características de la obra de David Alfaro Siqueiros pueden resumirse de la siguiente manera:</p>
+        <br><br>
+        <ul>
+            <li>Preferencia por el mural.</li>
+            <li>Monumentalidad.</li>
+            <li>Ruptura de la geometría estática.</li>
+            <li>Dinamismo y movimiento.</li>
+            <li>Poliangularidad. Conjunción de diversos planos y tamaños en una sola obra para crear mejores vistas según el ángulo visual.</li>
+            <li>Uso de primeros planos.</li>
+            <li>Definición de la óptica</li>
+            <li>Escorzo como elemento plástico-expresivo.</li>
+            <li>Desarrollo agresivo del volumen y el trazo.</li>
+            <li>Tendencia al Horror vacui o superficies recargadas.</li>
+        </ul>
+        
+        </h5></p></font>
+<br>
+<br>
+<br>
+    <script>
+    function confirmacion() {
+      var pregunta = confirm("¿Deseas regresar a inicio?")
+      if(pregunta) {
+        alert("")
+         window.location.href="index.html";
+    }
+    }
+    </script>
+    <button type="button" onclick="confirmacion()" >Regresar</button>
+    
+    
+    </BODY>
+    </HTML>

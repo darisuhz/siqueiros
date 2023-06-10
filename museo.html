@@ -1,0 +1,128 @@
+<HTML>
+    <HEAD>
+    <TITLE>
+    Museo
+    </TITLE>
+    <script>
+        function mostrarFechaHora() {
+            var fechaHora = new Date();
+            var fecha = fechaHora.toLocaleDateString();
+            var hora = fechaHora.toLocaleTimeString();
+
+            document.getElementById("fecha").innerHTML = fecha;
+            document.getElementById("hora").innerHTML = hora;
+        }
+    </script>
+     <script>
+        if(localStorage.getItem('contador')) {
+            var contador = parseInt(localStorage.getItem('contador'));
+            contador++;
+            localStorage.setItem('contador', contador);
+        } else {
+            localStorage.setItem('contador', 1);
+        }
+    </script>
+            <style>
+                .image-container {
+                position: relative;
+                display: inline-block;
+            }
+    
+            .image-container img {
+                display: block;
+                width: 300px;
+                height: 200px;
+            }
+    
+            .image-container .hover-image {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+            }
+    
+            .image-container:hover .hover-image {
+                opacity: 1;
+            }
+        </style>      
+    </HEAD>
+    <BODY bgcolor="pink" onload="mostrarFechaHora()" onload="blinktext">
+        <h2>Fecha y hora actual</h2>
+        <p>Fecha: <span id="fecha"></span></p> <p>Hora: <span id="hora"></span></p>
+        <br><br>
+        <p>Esta página ha sido visitada <span id="visitas"></span> veces.</p>
+        <script>
+            // Obtener el contador almacenado y mostrarlo en el elemento 'visitas'
+            var contador = localStorage.getItem('contador');
+            document.getElementById('visitas').textContent = contador;
+        </script>
+        <h2 align="center">Museo</h2>
+    <br>
+    <p ><h3><marquee BGCOLOR="red" direction=left>Bienvenido al museo de Siqueiros</h3></marquee></p>
+    <br><br><br><br>   
+    <h4>Pasa el cursor sobre la Imagen</h4>
+    <div class="image-container">
+        <img src="img_05.jpg" width="200" height="250" align="left" alt="Image 1">
+        <img class="hover-image" src="img_02.jpg" alt="Imagen 2" width="200" height="250" align="left" >
+        <br><br> 
+    </div>
+    <div class="image-container">
+        <img src="img_06.jpg" width="200" height="250" align="right" alt="Image 1">
+        <img class="hover-image" src="img_03.jpg" alt="Imagen 2" width="200" height="250" align="right">
+        <br><br> 
+    </div>
+    <div class="image-container">
+        <img src="img_07.jpg" width="200" height="250" align="right" alt="Image 1">
+        <img class="hover-image" src="img_04.jpg" alt="Imagen 2" width="200" height="250" align="right">
+        <br><br> 
+    </div>
+    <div class="image-container">
+        <img src="img_02.jpg" width="200" height="250" align="left" alt="Image 1">
+        <img class="hover-image" src="img_05.jpg" alt="Imagen 2" width="200" height="250" align="left">
+        <br><br> 
+    </div>
+    <div class="image-container">
+        <img src="img_03.jpg" width="200" height="250" align="left" alt="Image 1">
+        <img class="hover-image" src="img_06.jpg" alt="Imagen 2" width="200" height="250" align="left">
+        <br><br> 
+    </div>
+    <div class="image-container">
+        <img src="img_04.jpg" width="200" height="250" align="right" alt="Image 1">
+        <img class="hover-image" src="img_07.jpg" alt="Imagen 2" width="200" height="250" align="right">
+        <br><br> 
+    </div>
+    <br><br><br>
+    <p ><h3><marquee BGCOLOR="red" direction=left>Algunos videos sobre Siqueiros</h3></marquee></p>
+    <br>
+    <video controls>
+        <source src="video01.mp4"  type="video/mp4" width="50" height="50" align="left">
+    </video>
+    <br>
+    <video controls>
+        <source src="video02.mp4"  type="video/mp4" width="50" height="50" align="left">
+    </video>
+    <br>
+    <p ><h3><marquee BGCOLOR="red" direction=left>Audios</h3></marquee></p>
+    <br>
+    <align="center"><embed src="audio01.mp3" autostart="true">
+    <br><br>
+    <script>
+    function confirmacion() {
+      var pregunta = confirm("¿Deseas regresar a inicio?")
+      if(pregunta) {
+        alert("")
+         window.location.href="index.html";
+    }
+    }
+    </script>
+    <br><br>
+            <p>Efecto matrix</p>
+            <a href="Efecto Matrix.html">Ver el efecto matrix</a>
+            <br><br>
+
+    <button type="button" onclick="confirmacion()" >Regresar</button>
+    
+    
+    </BODY>
+    </HTML>
